@@ -32,4 +32,16 @@ public class AlberoBinario {
         System.out.print(nodo.getValore()+" ");
         if(nodo.esisteFiglioDestro())inOrder(nodo.getFiglioDestro());
     }
+
+    public void postOrder(Nodo nodo){
+        if(nodo.esisteFiglioSinistro()) inOrder(nodo.getFiglioSinistro());
+        if(nodo.esisteFiglioDestro())inOrder(nodo.getFiglioDestro());
+        System.out.print(nodo.getValore()+" ");
+    }
+
+    public void preOrder(Nodo nodo){
+        System.out.print(nodo.getValore()+" ");
+        if(nodo.esisteFiglioSinistro()) inOrder(nodo.getFiglioSinistro());
+        if(nodo.esisteFiglioDestro())inOrder(nodo.getFiglioDestro());
+    }
 }
